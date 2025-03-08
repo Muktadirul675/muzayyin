@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --base-theme: #FF0053;
+}
+
+.bg-theme{
+  background-color: var(--base-theme);
+}
+
+.fixedSearchBar{
+  /* transition:all 0.5s ease; */
+  animation: topSlide 0.25s ease-out;
+}
+
+@keyframes topSlide {
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 50px;
+  }
+}
+
+@layer components{
+  .form-input{
+    @apply border px-2 py-1.5 rounded-md focus:border-blue-400 focus:outline-none
+  }
+  .btn{
+    @apply bg-red-500 px-2 py-1 text-white rounded-md
+  }
+  .alert-error{
+    @apply px-2.5 py-2 border rounded border-red-600 bg-red-300 text-white 
+  }
+}
+
+.tiptap{
+  @apply border px-2 py-1.5 rounded-md focus:border-blue-400 focus:outline-none h-24 overflow-scroll min-h-56
+}
+
+.editor-controls .active{
+  @apply bg-red-200
+}
+
+.editor-controls > div:first-child{
+  @apply rounded-tl-none rounded-bl
+}
+
+.editor-controls > div:last-child{
+  @apply rounded-tr-none rounded-br
+}
+
+.tiptap ul{
+  @apply list-disc ps-4
+}
+
+.tiptap ol{
+  @apply list-decimal ps-4
+}
+
+.link{
+  @apply text-blue-500 hover:text-blue-600 cursor-pointer 
+}
+
+.zoomOnHover{
+  animation: rightLeftSlide 0.1s ease;
+}
+
+#topSearchForm{
+  animation: topDownSlide 0.1s ease;
+  overflow: hidden;
+  max-height: 70px;
+  transition: all 0.1s ease;
+}
+
+.animate-topDownSlide{
+  overflow: hidden;
+  animation: topDownSlide 0.1s ease;
+}
+
+#sidebar{
+  width: 300px;
+  max-width: 300px;
+  overflow: hidden;
+  transition: all 0.1s ease;
+  animation: rightLeftSlide 0.1s ease;
+}
+
+.carousel-image{
+  transition: all 0.15s ease;
+  animation: fade 0.15s ease;
+}
+
+.active_image:hover .carousel_zoom_image{
+  display: block;
+}
+
+.active_image.fade_out{
+  animation: fadeOut 0.15s ease;
+}
+
+.animate-bottomTopSlide{
+  animation: bottomTopSlide 0.15s ease;
+}
+
+@keyframes bottomTopSlide {
+  0%{
+    opacity: 0;
+    height: 0px;
+  }
+  100%{
+    opacity: 1;
+    height: 20px;
+  }
+}
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.5;
+  }
+}
+
+@keyframes fade{
+  0%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes topDownSlide{
+  0%{
+    height: 0px;
+    opacity: 0.5;
+  }
+  100%{
+    height: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes rightLeftSlide{
+  0%{
+    width: 0px;
+    opacity: 0.5;
+  }
+  100%{
+    width: 300px;
+    opacity: 1;
+  }
+}
+
+.remove-arrow::-webkit-inner-spin-button,
+.remove-arrow::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.remove-arrow {
+    -moz-appearance: textfield;
+}

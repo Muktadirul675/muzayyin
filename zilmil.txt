@@ -1,0 +1,13 @@
+SSH Access Information
+=============================
+Main IP Address: 103.169.160.194
+Server Name: server.zilmil.com.bd
+Root Password: Zilmilvps123**
+0L6XAYHDHc&
+
+Pathao API-
+Client ID- JxboV5Nagw
+Client Secret- J5Nnm9TjdqWOhm5jttHOErXR18SEx6HbAvZHUag9
+
+fashionbikebd@gmail.com
+Pw- pathao123**
