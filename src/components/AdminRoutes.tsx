@@ -101,5 +101,12 @@ export default function AdminRoutes() {
                 All Categories
             </span>
         </Link>
+        <Link href="/admin/customize/categorybanner" className={`${path === '/admin/customize/categorybanner' && 'bg-base-theme-dark'} flex transition-all my-3 items-center  text-white p-3 rounded hover:bg-base-theme-dark`}>
+            <BiCategory className="text-xl" />
+            <span className="hidden md:flex">
+                <span className="mx-2"></span>
+                Featured Categories
+            </span>
+        </Link>
     </>
 }
