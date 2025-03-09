@@ -163,7 +163,7 @@ export async function editProduct(formData: FormData) {
         const colorsStr: string[] = JSON.parse(JSON.stringify(formData.getAll('colors[]')))
         const colors: Color[] = colorsStr.map((c) => JSON.parse(c))
         const categories: { name: string, id: string }[] = JSON.parse(formData.get("categories[]")?.toString() ?? '[]')
-        console.log(images, variants, colors)
+        const isAvailable = parseInt(stocks.toString()) > 0
         await prisma.variant.deleteMany({
             where: { productId: id?.toString() }
         })
@@ -199,6 +199,7 @@ export async function editProduct(formData: FormData) {
                 price: parseInt(price.toString()),
                 discounted_price: parseInt(dPrice.toString()),
                 stocks: parseInt(stocks.toString()),
+                is_available: isAvailable,
                 categories: {
                     set: categories.map((c) => { return { id: c.id } })
                 }

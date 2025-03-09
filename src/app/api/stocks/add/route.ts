@@ -4,7 +4,6 @@ import { NextResponse } from "next/server"
 
 export async function POST(request: Request){
     const data :{prodId:string, stocks: number, variants:{stocks:number, id:string}[], colors:{stocks:number, id:string}[]} = await request.json()
-    console.log(data)
     let product = await prisma.product.findUnique({
         where:{id:data.prodId},
         select:{
@@ -12,16 +11,15 @@ export async function POST(request: Request){
             stocks: true
         }
     })
-    console.log("prev prod ", product)
+    const isAvailable = product?.stocks ? product.stocks > 0 : false
     product = await prisma.product.update({
         where:{id:data.prodId},
         data:{
             stocks: (product?.stocks ?? 0) + data.stocks,
+            is_available: isAvailable
         }
     })
-    console.log("next prod ", product)
     for(const variant of data.variants){
-        console.log(variant)
         const v = await prisma.variant.findUnique({
             where:{id:variant.id},
         })
@@ -46,6 +44,7 @@ export async function POST(request: Request){
             }
         })
     }
+
     const prod = await prisma.product.findUnique({
         where: {id:data.prodId},
         select:{
