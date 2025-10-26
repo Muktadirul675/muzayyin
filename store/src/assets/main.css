@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.btn{
+    @apply text-white bg-gray-500 px-2 py-1.5 rounded hover:bg-gray-600 transition-all
+}
+
+button{
+    cursor: pointer;
+}
+
+.bn{
+    @apply font-semibold;
+}

@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@tailwind utilities;
+/* Base badge style */
+.badge {
+    @apply inline-block text-xs  px-2.5 py-0.5 rounded-full font-semibold;
+}
+
+td {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Blue variant */
+.badge-blue {
+    @apply inline-block text-xs  px-2.5 py-0.5 rounded-full font-semibold bg-blue-300 text-blue-800;
+}
+
+/* White variant */
+.badge-white {
+    @apply inline-block text-xs  px-2.5 py-0.5 rounded-full font-semibold bg-white text-gray-800 border border-gray-300;
+}
+
+/* Gray variant */
+.badge-gray {
+    @apply inline-block text-xs  px-2.5 py-0.5 rounded-full font-semibold bg-gray-300 text-gray-800;
+}
+
+button {
+    cursor: pointer;
+}
+
+.input {
+    @apply border border-gray-300 rounded px-2 py-1 bg-white
+}
+
+.btn {
+    @apply px-2 bg-blue-500 hover:bg-blue-600 rounded text-white py-1.5 cursor-pointer
+}
+
+.label {
+    @apply text-gray-800 font-semibold
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li {
+    list-style: disc;
+}
+
+ol li {
+    list-style: decimal;
+}
