@@ -44,10 +44,10 @@
         <span>Orders Overview</span>
       </RouterLink>
 
-      <RouterLink v-if="auth.isAdmin||auth.isStaff" to="/couriers" class="hover:bg-gray-700 p-2 rounded flex items-center space-x-2">
+      <!-- <RouterLink v-if="auth.isAdmin||auth.isStaff" to="/couriers" class="hover:bg-gray-700 p-2 rounded flex items-center space-x-2">
         <i class="pi pi-truck"></i>
         <span>Courier</span>
-      </RouterLink>
+      </RouterLink> -->
 
       <RouterLink v-if="auth.isAdmin" to="/logs" class="hover:bg-gray-700 p-2 rounded flex items-center space-x-2">
         <i class="pi pi-file"></i>
