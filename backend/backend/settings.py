@@ -123,10 +123,10 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://localhost:5174",
     "http://localhost:4173",
-    "https://zilmil.com.bd",
-    "http://zilmil.com.bd",
-    "https://admin.zilmil.com.bd",
-    "http://admin.zilmil.com.bd", 
+    "https://muzayyin.com",
+    "http://muzayyin.com",
+    "https://admin.muzayyin.com",
+    "http://admin.muzayyin.com", 
 ]
 
 CORS_ALLOW_HEADERS = list(default_headers) + [
@@ -138,7 +138,7 @@ CORS_ALLOW_METHODS = list(default_methods)  # This already includes GET, POST, O
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
-    "https://api.zilmil.com.bd"
+    "https://api.muzayyin.com"
 ]
 
 TEMPLATES = [
